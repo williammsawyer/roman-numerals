@@ -24,7 +24,7 @@ const romanMap = {
  *   2. SUBTRACTION: If the current value is smaller than the value on the right, subtract the current value. (e.g., IV -> 1 < 5, so subtract 1).
  * Examples:
  *   VI (5 + 1 = 6)
- *   IV (5 - 1 = 4)
+ *   IV (-1 + 5 = 4)
  */
 
 /**
