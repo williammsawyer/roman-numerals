@@ -12,7 +12,7 @@ public class RomanConverter {
     */
 
     // Mapping of Roman numerals to their integer values
-    private static final Map<Character, Integer> ROMAN_MAP = Map.of(
+    private static final Map<char, int> ROMAN_MAP = Map.of(
         'I', 1,
         'V', 5,
         'X', 10,
