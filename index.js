@@ -1,9 +1,9 @@
 /*
   15 mins time box.
-  Please think out loud so we can get a since of your thought process.
+  Please think out loud so we can get a sense of your thought process.
   Ask questions when you are stuck.
   Finishing it is not a requirement.
-  Syntax is not imporant you are welcome to code in any language you are familiar with.
+  Syntax is not important; you are welcome to code in any language you are familiar with 
 */
 
 // Mapping of Roman numerals to their integer values
@@ -17,14 +17,22 @@ const romanMap = {
     'M': 1000
 };
 
-/* RULES FOR CALCULATION:
- * Iterate through the string and compare the current character's value
- * to the value of the character to its right.
- *   1. ADDITION: If the current value is greater than or equal to the value on the right, add the current value. (e.g., VI -> 5 >= 1, so add 5).
- *   2. SUBTRACTION: If the current value is smaller than the value on the right, subtract the current value. (e.g., IV -> 1 < 5, so subtract 1).
- * Examples:
- *   VI (5 + 1 = 6)
- *   IV (-1 + 5 = 4)
+/* THE LOGIC:
+ *
+ * GENERAL RULE (Addition):
+ * - Usually, you simply sum up the values of the symbols.
+ * - Example: VI -> 5 + 1 = 6
+ * - Example: VII -> 5 + 1 + 1) = 7
+ *
+ * THE EXCEPTION (Subtraction):
+ * - If a smaller value appears *before* a larger value, it is subtracted from the total.
+ * - Example: IV -> -1 + 5 = 4 
+     Because I(1) is smaller than V(5), we subtract.  
+ * - Example: IX -> -1 + 10 = 9 
+     Because I(1) is smaller than X(10), we subtract.  
+ *
+ * COMPLEX EXAMPLE:
+ * XIV -> 10 - 1 + 5 = 14
  */
 
 /**
@@ -34,3 +42,5 @@ const romanMap = {
 function romanToInt(s) {
     // TODO Your code here
 }
+
+console.log(romanToInt("IV"))
