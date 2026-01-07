@@ -7,7 +7,6 @@
 */
 
 // Mapping of Roman numerals to their integer values
-// We use Record<string, number> to prevent "Element implicitly has an 'any' type" errors
 const romanMap: Record<string, number> = {
     'I': 1,
     'V': 5,
